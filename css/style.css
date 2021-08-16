@@ -1,0 +1,473 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*header............................................*/
+body{
+    position: relative;
+}
+header{
+    position: relative;
+    background-image: url("../images/HEADER.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 25em;
+}
+header h1{
+    position: absolute;
+    padding-top:.2em;
+    padding-left: 50px;
+    font-family:serif;
+    font-weight: bolder;
+    color:white;
+}
+label{
+    font-family: cursive;
+    position: absolute;
+    padding-top:60px;
+    padding-left: 50px;
+    color:rgb(185, 209, 139);
+}
+header .layer{
+    position:absolute;
+    background-color:black;
+    filter:opacity(60%);
+    width:100%;
+    height:180px;
+    margin-top:12.8em;
+}
+label b{
+    color:orangered;
+}
+header .head-tag{
+    position:absolute;
+    float: right;
+    padding-left:25em;
+    padding-top: 6em;
+}
+header .log-tags{
+    font-family: cursive;
+    position:relative;
+    float:right;
+    padding-top: 19.4em;
+    padding-right: 4em;
+}
+.head-tag a{
+    font-family:cursive;
+    font-size: 15px;
+    border:2px soliD whitesmoke;
+    text-decoration: none;
+    color:white;
+    padding:1.3em;
+    margin-right: 25px;
+}
+.head-tag a:hover{
+    columns: rgb(87, 3, 87);
+    background-color:rgb(3, 97, 3);
+    transition:ease-in-out .4s;
+    color: beige;
+    font-size: larger;
+    font-weight: bolder;
+}
+header img{
+    position: absolute;
+    padding-left: 2em;
+    padding-top: 2em;
+    filter: opacity(60%);
+}
+
+/*header........................................................*/
+/*about kerala..................................................*/
+div.aboutkerala{
+  position: absolute;
+  width:60%;
+  height:94%;
+  background-color:rgb(185, 209, 139) ;
+  padding: .7em;
+  margin-top: 25px;
+  margin-left: 10px;
+}
+div.aboutkerala p{
+  color:tomato;
+}
+div.aboutkerala a{
+  text-decoration: none;
+  font-weight: bolder;
+  font-style: oblique;
+}
+div.attractions{
+  background-color:rgb(38, 59, 4);
+  position: absolute;
+  color: white;
+  margin-left: 51.8em;
+  margin-top: 25px;
+  padding:1.3em;
+  width:38%;
+  text-align: center;
+}
+div.hotspotimages{
+  position:absolute;
+  width:38%;
+  height: 48%;
+  margin-left: 51.8em;
+  margin-top:7em;
+}
+/*about kerala..................................................*/
+/*login page.....................................................*/
+.log{
+    background-image: url("../images/tea.jpg");
+    height :15em;;
+}
+.log .log-tags{
+    padding-top: 10em;
+}
+
+/*login page.....................................................*/
+
+/*districts Carousal............................................*/
+
+.container{
+    width:70%;
+    margin-top:10px;
+    float:left;
+    background-color:rgb(206, 243, 131);
+}
+.container .row{
+    padding:5px;
+  
+}
+.container .row .col a{
+    position:relative;
+}
+.container .row .col{
+    padding:5px;
+}
+.container .row .col a h3{
+    position: absolute;
+    padding-left:.2em;
+    padding-top: 4em;
+    text-align: center;
+    color:yellow;
+    
+}
+.container .row .col a img:hover{
+    transform: scale(1.5);
+}
+.container .row .col a img{
+    border:solid 3px whitesmoke ;
+}
+div.map-image{
+    position: absolute;
+    margin-left:60em;
+    margin-top:.6em;
+}
+
+/*districts Carousal............................................*/
+div.distcontent{
+  position: absolute;
+  float:left;
+  width:70%;
+  margin-top: 17em;
+  background-color: rgb(60, 95, 3);
+  padding:2em;
+}
+div.distcontent p{
+  color:rgb(245, 252, 156);
+  font-size: medium;
+  font-weight: bolder;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/*About section.................................................*/
+.content{
+    margin-top:26.6em;
+    background-image: url(../images/more.jpg);
+    background-attachment: scroll;
+    float: left;
+    width: 100%;
+    padding-left:5.2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    
+}
+.content .con-box{
+    width:230px;
+    display:inline-block;
+}
+.content .con-box h5{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(32, 5, 129);
+}
+.content .con-box p{
+    font-family: cursive;
+    text-align: justify;
+    color: rgb(235, 98, 144);
+    height:200px;
+}
+/*About section.................................................*/
+
+/*explore....................................................*/
+
+div.more{
+    position: absolute;
+    background-image: url("../images/more.jpg");
+    height:190px;
+    width: 100%;
+    margin-top: 1050px;
+    text-align: center;
+    color:white;
+    padding-top:1em;
+}
+div.more h4{
+  color: rgb(238, 241, 12);
+  font-variant: small-caps;
+}
+div.more a{
+    text-decoration: none;
+    color: wheat;
+}
+div.more ul{
+    display:inline-block;
+    padding-right: 5em;
+    padding-left: 5em;
+}
+div.more ul li{
+  color:white;
+  font-family: cursive;
+  font-variant: small-caps;
+}
+
+/*Explore..........................*/
+
+/*Footer...........................*/
+.footer{
+    position:absolute;
+    margin-top: 1255px;
+    background-image: url("../images/footer.jpg");
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+.footer p.icon a{
+    text-decoration: none;
+    font-size:50px;
+    color:white;
+    text-align: center;
+}
+
+/*Footer...................................*/
+
+/*search bar.................................*/
+
+form.example input[type=text] {
+    padding: 6px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float:inherit;
+    width: 55%;
+    background: #f1f1f1;
+  }
+  form.example button {
+    float: inherit;
+    width: 15%;
+    padding: 6px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    cursor:pointer;
+  }
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /*search bar..........................*/
+
+
+  /*login style............................*/
+
+ input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 18px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #29501f;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto;
+    padding: 8px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    height: 100px;
+    position: absolute;
+  }
+  
+  .container1 {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    padding-left: 25%;
+    position: relative; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    width: 70%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    padding-top:100px;
+  }
+  
+  /*Modal Content/Box */
+  .modal-content {
+    background-image: url("../images/login.jpg");
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    width: 80%;/* Could be more or less, depending on screen size */
+    height:70%;
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: rgb(2, 36, 2);
+    font-size: 55px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+
+  .login-popup{
+      position: relative;
+      background-image:url("../images/loginpopup\ \(2\).jpg");
+      width:100%;
+      height:8em;
+      margin-top: 18px;
+      display:inline-block;
+  }
+  .login-popup .elements h1{
+      position:absolute;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      color:rgb(3, 63, 13);
+      padding-top: 45px;
+      padding-left: 10em;
+  }
+  .login-popup .elements button{
+      position:absolute;
+      margin-left:42em;
+      padding-left:6em;
+      padding-right: 6em;
+      margin-top: 45px;
+  }
+  
+  
+
+  /*map image positioning...................*/
+
+  div.drop{
+            position: absolute;
+            width:46%;
+            margin-top: 14.5em;
+            margin-left: 41.5em;
+          }
+  div.drop a{
+          color: white;
+  }
+  div.drop li{
+          background-color:rgb(77, 77, 2);
+  }
+
+  /*signup page...................................*/
+  div.signup h2{
+    color:white;
+    font-style: oblique;
+    text-align: center;
+  }
+  img.signupimg{
+    position: absolute;
+  }
+  div.signup-contents{
+    position: relative;
+    width:50%;
+    max-height:60%;
+    border: 1px solid green;
+    background-color: rgb(44, 148, 117);
+    padding: 1em;
+    margin-left:23em;
+    margin-top: 1em;
+  }
+  div.signup label{
+    color: rgb(5, 37, 12);
+  }
+  img.img-side{
+    position: absolute;
+    margin-left:64em;
+    margin-top:1em;
+    height:42em;
+  }
+  /*signup page...................................*/

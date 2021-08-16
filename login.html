@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../assignment1/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/26d4a64054.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Kerala Tourism-Login</title>
+</head>
+<body>
+    <header class="log"> 
+        <img src="./images/logokerala.png"> 
+        <div class="log-tags" >
+          <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #dffac1;">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./signup.html">Sign Up</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./login.html">Login</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+        </nav>
+        </div>
+        <div class="head-tag">
+            <a href="./index.html">Home</a>
+            <a href="">Languauge</a>
+            <a href="">Plan your Trip</a>
+            <a href="">Find Hotels</a>
+            <a href="">Find in Map</a>
+            <a href="./district.html" target="_blank">Districts</a>
+        </div> 
+    </div>   
+    </header>
+
+    <div class="login-popup">
+    <div class="elements">
+    <h1>Login Here..</h1>
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+    </div>
+    <div id="id01" class="modal">
+      
+      <form class="modal-content animate" action="" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+        <div class="container1">
+          <input type="text" placeholder="Enter Username" name="uname" required>
+    
+          <input type="password" placeholder="Enter Password" name="psw" required>
+            
+          <button type="submit">Login</button>
+        </div>
+    
+        <div class="container1" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+</div>
+<div class="more" style="margin-top:14px;height:250px">
+    <h4>Explore More..</h4>
+    <ul>
+      <a href="#"><li>Hills</li><a>
+      <a href="#"><li>Backwaters</li></a>
+      <a href="#"><li>Beaches</li></a>
+      <a href="#"><li>Wild Life</li></a>
+      <a href="#"><li>Kerala Food</li></a>
+      <a href="#"><li>Tourism Events</li></a>
+      <a href="#"><li>Vayanadu</li></a>
+    </ul>
+    <ul>
+      <a href="#"><li>Waterfalls</li><a>
+      <a href="#"><li>Ayurveda</li></a>
+      <a href="#"><li>Festivals</li></a>
+      <a href="#"><li>HouseBoat</li></a>
+      <a href="#"><li>Monsoon</li></a>
+      <a href="#"><li>Munnar</li></a>
+      <a href="#"><li>Periyar</li></a>
+    </ul>
+  </div> 
+  <footer class="footer" style="margin-top:280px;">
+    <span><h4>Connect with us</h4></span>
+    <p class="icon">
+      <a href="#"><i class="fab fa-facebook-square"> </i></a>
+      <a href="#"><i class="fab fa-twitter-square"></i></a>
+      <a href="#"><i class="fab fa-google-plus-square"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i> </a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </p>
+    <form class="example" action="#">
+      <input type="text" placeholder="Search.." name="search" style="margin:auto;max-width:300px">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+    <p>Phone: +91 471 0000000, Fax: +91 471 00000000, E-mail: kerala@tourism.org.</p>
+   <p>All rights reserved © Kerala Tourism 2021. Copyright | Terms of Use | Cookie Policy | Contact Us.</p> 
+   <p>Developed and Maintained by S***********</p> 
+  </footer>
+      <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>
+
+
+
+</body>
+</html>
