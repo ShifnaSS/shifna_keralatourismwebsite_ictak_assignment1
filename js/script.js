@@ -5,7 +5,7 @@ let ph = document.getElementById("ph");
 let error =  document.getElementById("error");
 let pass1 = document.getElementById("pass1");
 let pass2 = document.getElementById("pass2");
-let regexp = /^([\w\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+let regexp = /^([\w\._-]+)@([A-Za-z0-9]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
 let number = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 let passcheck = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
 function validation()
@@ -83,6 +83,38 @@ pass1.addEventListener('input', function() {
 
 
 
+
+//modal 
+var modal = document.getElementById('id01');
+        
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+//login page validation
+
+function validation1(){
+    if(regexp.test(email.value)&&passcheck.test(pass1.value))
+    {
+        return true;
+    }
+    else if(regexp.test(email.value))
+    {
+        error.innerHTML = "password incorrect";
+        error.style.color = "red";
+        return false;
+    }
+    else
+    {
+        error.innerHTML = "Invalid Email-Id";
+        error.style.color = "red";
+        return false;
+    }
+}
 
 
 

@@ -57,25 +57,22 @@
     </div>
     <div id="id01" class="modal">
       
-      <form class="modal-content animate" action="" method="post">
+      <form class="modal-content animate" action="district.html" onsubmit="return validation1()">
         <div class="imgcontainer">
           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
         </div>
-        
         <div class="container1">
-      
-          <input type="text" placeholder="Enter email Id" name="uname" required id="email">
+          <input type="text" placeholder="Enter email Id" id="email" required >
     
-          <input type="password" placeholder="Enter Password" name="psw" required  id="pass">
+          <input type="password" placeholder="Enter Password" id="pass1" required  >
             
           <button type="submit">Login</button>
-      
         </div>
         <div class="container1" style="background-color:#f1f1f1">
           <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <label id="error"></label>
           <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
-      
       </form>
     </div>
 </div>
@@ -118,19 +115,6 @@
    <p>All rights reserved © Kerala Tourism 2021. Copyright | Terms of Use | Cookie Policy | Contact Us.</p> 
    <p>Developed and Maintained by S***********</p> 
   </footer>
-      <script>
-        // Get the modal
-        var modal = document.getElementById('id01');
-        
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-        </script>
-
-
-
+      <script src="/js/script.js"></script>
 </body>
 </html>
