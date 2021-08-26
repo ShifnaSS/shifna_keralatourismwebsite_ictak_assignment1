@@ -14,12 +14,12 @@ header{
     background-repeat: no-repeat;
     height: 25em;
 }
-header h1{
+header h3{
     position: absolute;
     padding-top:.2em;
     padding-left: 50px;
     font-family:serif;
-    font-weight: bolder;
+   font-weight: bolder; 
     color:white;
 }
 label{
@@ -58,17 +58,16 @@ header .log-tags{
     font-size: 15px;
     border:2px soliD whitesmoke;
     text-decoration: none;
-    color:white;
-    padding:1.3em;
+    padding:1.2em;
     margin-right: 25px;
+    width: 120px;
 }
 .head-tag a:hover{
     columns: rgb(87, 3, 87);
     background-color:rgb(3, 97, 3);
     transition:ease-in-out .4s;
     color: beige;
-    font-size: larger;
-    font-weight: bolder;
+    font-size: medium;
 }
 header img{
     position: absolute;
@@ -82,7 +81,8 @@ header img{
 div.aboutkerala{
   position: absolute;
   width:60%;
-  height:94%;
+  display: inline-block;
+  height:27%;
   background-color:rgb(185, 209, 139) ;
   padding: .7em;
   margin-top: 25px;
@@ -109,8 +109,9 @@ div.attractions{
 div.hotspotimages{
   position:absolute;
   width:38%;
-  height: 48%;
-  margin-left: 51.8em;
+  display: inline-block;
+  height: 27%;
+  margin-left: 51.8em; 
   margin-top:7em;
 }
 /*about kerala..................................................*/
@@ -182,9 +183,9 @@ div.distcontent p{
 .content{
     margin-top:26.6em;
     background-image: url(../images/more.jpg);
-    background-attachment: scroll;
-    float: left;
+    /* float: left; */
     width: 100%;
+    display: inline-block;
     padding-left:5.2em;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -214,7 +215,7 @@ div.more{
     background-image: url("../images/more.jpg");
     height:190px;
     width: 100%;
-    margin-top: 1050px;
+    margin-top: 10px;
     text-align: center;
     color:white;
     padding-top:1em;
@@ -243,7 +244,7 @@ div.more ul li{
 /*Footer...........................*/
 .footer{
     position:absolute;
-    margin-top: 1255px;
+    margin-top:210px;
     background-image: url("../images/footer.jpg");
     width: 100%;
     height: 300px;
