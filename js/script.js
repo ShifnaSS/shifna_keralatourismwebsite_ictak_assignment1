@@ -5,20 +5,38 @@ let ph = document.getElementById("ph");
 let error =  document.getElementById("error");
 let pass1 = document.getElementById("pass1");
 let pass2 = document.getElementById("pass2");
+let firstn = document.getElementById("firstn");
+let lastn = document.getElementById("lastn");
+let checkbox = document.getElementById("checkbox");
 let regexp = /^([\w\._-]+)@([A-Za-z0-9]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
 let number = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-let passcheck = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
+let passcheck = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,20}$/;
 function validation()
-{
-    if(pass1.value==pass2.value)
+{ 
+    if(email.value.trim()==""||ph.value.trim()==""||pass1.value.trim()==""||pass2.value.trim()==""||firstn.value.trim()==""||lastn.value.trim()=="")
     {
-        if(regexp.test(email.value)&&number.test(ph.value)&&passcheck.test(pass1.value))
+        error.innerHTML= "Fields cannot be empty";
+        error.style.color = "red";
+        return false;
+    }
+    else if(pass1.value.trim()==pass2.value.trim())
+    {
+        if(regexp.test(email.value)&&number.test(ph.value)&&passcheck.test(pass1.value.trim()))
         {
-            return true;
+            if(!checkbox.checked)
+            {
+                alert('You must agree to the terms first.');
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+            
         }
         else if(regexp.test(email.value)&&number.test(ph.value))
         {
-            if(pass1.value.length<8)
+            if(pass1.value.trim().length<8)
             {
                 error.innerHTML = "password too short";
                 error.style.color = "red";
@@ -26,7 +44,7 @@ function validation()
             }
             else
             {
-            error.innerHTML = "password should contain  atleast 1 lowercase 1 uppercase and 1 number";
+            error.innerHTML = "password should contain  atleast 1 lowercase, 1 uppercase,1 number  and atleast one special character";
             error.style.color = "red";
             return false;
             }
@@ -56,66 +74,126 @@ function validation()
 
 //checking the strength of password
 
-var strength = {
-    0: "poor",
-    1: "medium",
-    2: "Strong",
-  }
 
 
-  var meter = document.getElementById('password-strength-meter');
-var text = document.getElementById('password-strength-text');
-
-pass1.addEventListener('input', function() {
-  var val = pass1.value;
-  var result = zxcvbn(val);
-
-  // Update the password strength meter
-  meter.value = result.score;
-
-  // Update the text indicator
-  if (val !== "") {
-    text.innerHTML = "Strength: " + strength[result.score]; 
-  } else {
-    text.innerHTML = "";
-  }
-});
-
-
-
-
-//modal 
-var modal = document.getElementById('id01');
-        
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 
 
 //login page validation
 
-function validation1(){
-    if(regexp.test(email.value)&&passcheck.test(pass1.value))
+function validation1()
+{
+    if(email.value.trim()==""||pass1.value.trim()=="")
     {
-        return true;
+        error.innerHTML = "Fields Cannot be empty";
+        error.style.color = "red";
+        return false;
     }
+    else if(regexp.test(email.value)&&passcheck.test(pass1.value.trim()))
+        {
+            return true;
+        }
     else if(regexp.test(email.value))
-    {
-        error.innerHTML = "password incorrect";
-        error.style.color = "red";
-        return false;
-    }
+        {
+            error.innerHTML = "password incorrect";
+            error.style.color = "red";
+            return false;
+        }
     else
-    {
-        error.innerHTML = "Invalid Email-Id";
-        error.style.color = "red";
-        return false;
-    }
+        {
+            error.innerHTML = "Invalid Email-Id";
+            error.style.color = "red";
+            return false;
+        }
+    
 }
 
 
 
+//strength Check
+
+    function checkStrength(password) {
+        var strength = 0;
+
+
+        //If password contains both lower and uppercase characters, increase strength value.
+        if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) {
+            strength += 1;
+            $('.low-upper-case').addClass('text-success');
+            $('.low-upper-case i').removeClass('fa-file-text').addClass('fa-check');
+            $('#popover-password-top').addClass('hide');
+
+
+        } else {
+            $('.low-upper-case').removeClass('text-success');
+            $('.low-upper-case i').addClass('fa-file-text').removeClass('fa-check');
+            $('#popover-password-top').removeClass('hide');
+        }
+
+        //If it has numbers ,increase strength value. 
+        if (password.match(/([0-9])/)) {
+            strength += 1;
+            $('.one-number').addClass('text-success');
+            $('.one-number i').removeClass('fa-file-text').addClass('fa-check');
+            $('#popover-password-top').addClass('hide');
+
+        } else {
+            $('.one-number').removeClass('text-success');
+            $('.one-number i').addClass('fa-file-text').removeClass('fa-check');
+            $('#popover-password-top').removeClass('hide');
+        }
+
+        //If it has one special character, increase strength value.
+        if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/)) {
+            strength += 1;
+            $('.one-special-char').addClass('text-success');
+            $('.one-special-char i').removeClass('fa-file-text').addClass('fa-check');
+            $('#popover-password-top').addClass('hide');
+
+        } else {
+            $('.one-special-char').removeClass('text-success');
+            $('.one-special-char i').addClass('fa-file-text').removeClass('fa-check');
+            $('#popover-password-top').removeClass('hide');
+        }
+
+        if (password.length > 7) {
+            strength += 1;
+            $('.eight-character').addClass('text-success');
+            $('.eight-character i').removeClass('fa-file-text').addClass('fa-check');
+            $('#popover-password-top').addClass('hide');
+
+        } else {
+            $('.eight-character').removeClass('text-success');
+            $('.eight-character i').addClass('fa-file-text').removeClass('fa-check');
+            $('#popover-password-top').removeClass('hide');
+        }
+
+
+
+
+        // If value is less than 2
+
+        if (strength < 2) {
+            $('#result').removeClass()
+            $('#password-strength').addClass('progress-bar-danger');
+            $('#result').addClass('text-danger').text('Poor');
+            $('#password-strength').css('width', '10%').css('background-color','red');
+        } else if (strength == 2) {
+            $('#result').addClass('good');
+            $('#password-strength').removeClass('progress-bar-danger');
+            $('#password-strength').addClass('progress-bar-warning');
+            $('#result').addClass('text-warning').text('Medium')
+            $('#password-strength').css('width', '55%').css('background-color','orange');
+            return 'Week'
+        } else if (strength == 4) {
+            $('#result').removeClass()
+            $('#result').addClass('strong');
+            $('#password-strength').removeClass('progress-bar-warning');
+            $('#password-strength').addClass('progress-bar-success');
+            $('#result').addClass('text-success').text('Strong');
+            $('#password-strength').css('width', '100%').css('background-color','green');
+
+            return 'Strong'
+        }
+
+    }
 

@@ -445,7 +445,7 @@ form.example input[type=text] {
 
   /*signup page...................................*/
   div.signup h2{
-    color:white;
+    color:rgb(4, 83, 24);
     font-style: oblique;
     text-align: center;
   }
@@ -456,8 +456,8 @@ form.example input[type=text] {
     position: relative;
     width:50%;
     max-height:60%;
-    border: 1px solid green;
-    background-color: rgb(44, 148, 117);
+    border: 1px solid rgb(18, 51, 18);
+    background-color: #dffac19a;;
     padding: 1em;
     margin-left:23em;
     margin-top: 1em;
