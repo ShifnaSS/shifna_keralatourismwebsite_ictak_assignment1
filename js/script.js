@@ -8,7 +8,7 @@ let pass2 = document.getElementById("pass2");
 let firstn = document.getElementById("firstn");
 let lastn = document.getElementById("lastn");
 let checkbox = document.getElementById("checkbox");
-let regexp = /^([\w\._-]+)@([A-Za-z0-9]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+let regexp = /^([\w\._-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
 let number = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 let passcheck = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,20}$/;
 function validation()
@@ -155,7 +155,7 @@ function validation1()
             $('#popover-password-top').removeClass('hide');
         }
 
-        if (password.length > 7) {
+        if (password.trim().length > 7) {
             strength += 1;
             $('.eight-character').addClass('text-success');
             $('.eight-character i').removeClass('fa-file-text').addClass('fa-check');
