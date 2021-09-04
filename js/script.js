@@ -57,8 +57,15 @@ function validation()
     }
     else if(pass1.value.trim()==pass2.value.trim())
     {
+        email.style.border = "";
+        ph.style.border = "";
+        pass1.style.border = "";
+        pass2.style.border = "";
+        lastn.style.border = "";
+        firstn.style.border = "";
         if(regexp.test(email.value)&&number.test(ph.value)&&passcheck.test(pass1.value.trim()))
         {
+            error.innerHTML = "";
             if(!checkbox.checked)
             {
                 alert('You must agree to the terms first.');
@@ -105,7 +112,12 @@ function validation()
     }
     else
     {
-        pass2.style.border="1px orange solid";
+        email.style.border = "";
+        ph.style.border = "";
+        pass1.style.border = "";
+        lastn.style.border = "";
+        firstn.style.border = "";
+        pass2.style.border="1px red solid";
         error.innerHTML = "password mismatching";
         error.style.color = "red";
         return false;
