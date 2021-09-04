@@ -8,7 +8,7 @@ let pass2 = document.getElementById("pass2");
 let firstn = document.getElementById("firstn");
 let lastn = document.getElementById("lastn");
 let checkbox = document.getElementById("checkbox");
-let regexp = /^([\w\._-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+let regexp = /^([\w\._-]+)@([A-Za-z0-9\-]+)[.]([a-z]{2,3})(.[a-z]{2,3})?$/;
 let number = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 let passcheck = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,20}$/;
 function validation()
@@ -17,6 +17,42 @@ function validation()
     {
         error.innerHTML= "Fields cannot be empty";
         error.style.color = "red";
+        if(email.value.trim()==""){
+            email.style.border = "1px solid red"; 
+        }
+        else{
+            email.style.border = ""; 
+        }
+        if(ph.value.trim()==""){
+            ph.style.border = "1px solid red";
+        }
+        else{
+            ph.style.border = "";
+        }
+        if(pass1.value.trim()==""){
+            pass1.style.border = "1px solid red";
+        }
+        else{
+            pass1.style.border = "";
+        }
+        if(pass2.value.trim()==""){
+            pass2.style.border = "1px solid red";
+        }
+        else{
+            pass2.style.border = "";
+        }
+        if(firstn.value.trim()==""){
+            firstn.style.border = "1px solid red";
+        }
+        else{
+            firstn.style.border = "";
+        }
+        if(lastn.value.trim()==""){
+            lastn.style.border = "1px solid red";
+        }
+        else{
+            lastn.style.border = "";
+        }
         return false;
     }
     else if(pass1.value.trim()==pass2.value.trim())
@@ -40,12 +76,15 @@ function validation()
             {
                 error.innerHTML = "password too short";
                 error.style.color = "red";
+                pass1.style.border = "1px solid red";
                 return false;
             }
             else
             {
             error.innerHTML = "password should contain  atleast 1 lowercase, 1 uppercase,1 number  and atleast one special character";
             error.style.color = "red";
+            pass1.style.border = "1px solid red";
+            pass2.style.border = "1px solid red";
             return false;
             }
         }
@@ -53,18 +92,20 @@ function validation()
         {
             error.innerHTML = "phone number not in correct format";
             error.style.color = "red";
+            ph.style.border = "1px solid red";
             return false;
         }
         else
         {
             error.innerHTML = "invalid email Id";
             error.style.color = "red";
+            email.style.border = "1px solid red";
             return false;
         }
     }
     else
     {
-        pass2.style.border="1px red solid";
+        pass2.style.border="1px orange solid";
         error.innerHTML = "password mismatching";
         error.style.color = "red";
         return false;
